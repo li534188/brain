@@ -4,6 +4,11 @@ import {connect} from '@tarojs/redux'
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/global'
 import './index.scss'
+import minePng from '../asset/mine.png'
+import exercisePng from '../asset/exercise.png'
+import communityPng from '../asset/community.png'
+import meditationPng from '../asset/meditation.png'
+import brainPng from '../asset/brain.png'
 
 export interface MyProps {
     index : number,
@@ -29,28 +34,28 @@ class Hello extends Component<MyProps, MyState> {
             selectedColor: "#3cc51f",
             list: [{
               pagePath: "/pages/meditation/index",
-              iconPath: "/asset/meditation.png",
+              iconPath: meditationPng,
               selectedIconPath: "/image/icon_component_HL.png",
               text: "冥想"
             }, {
               pagePath: "/pages/exercise/index",
-              iconPath: "/asset/exercise.png",
+              iconPath: exercisePng,
               selectedIconPath: "/image/icon_API_HL.png",
               text: "锻炼"
             }, {
               pagePath: "/pages/brain/index",
-              iconPath: "/asset/brain.png",
+              iconPath: brainPng,
               selectedIconPath: "/image/icon_API_HL.png",
               text: "大脑"
             }, {
               pagePath: "/pages/community/index",
-              iconPath: "/asset/community.png",
+              iconPath: communityPng,
               selectedIconPath: "/image/icon_API_HL.png",
               text: "社区"
             }, {
               pagePath: "/pages/mine/index",
               iconPath: "/asset/mine.png",
-              selectedIconPath: "/image/icon_API_HL.png",
+              selectedIconPath: minePng,
               text: "我的"
             }]
           },
@@ -63,16 +68,21 @@ class Hello extends Component<MyProps, MyState> {
       console.log(index);
    }
 
-  componentDidMount () { }
+  componentDidMount () {
+    console.log(123)
+   }
 
   componentWillUnmount () { }
 
   componentDidShow () {
-      const {data} = this.state;
-    const  {index} = this.props;
-    this.setState({
-        data:{...data,selected:index}
-    })
+    // const {data} = this.state;
+    // const {index} = this.props;
+    // console.log(888)
+    // console.log(index)
+    // this.setState({
+    //     data:{...data,selected:index}
+    // })
+    console.log(123)
    }
 
   componentDidHide () { }
@@ -96,14 +106,16 @@ class Hello extends Component<MyProps, MyState> {
 
   render () {
       const {data:{list, selected, selectedColor, color},} = this.state;
+      const {index} = this.props
+      let pageIdex = index;
     return (
         <CoverView className="tab-bar">
             <CoverView className="tab-bar-border"></CoverView>
     
             {list.map((item,index)=>(
                 <CoverView key={item.pagePath} className="tab-bar-item" data-path={item.pagePath} data-index={index} onClick={this.switchTab}>
-                    <CoverImage  className={selected === index ? 'text-select' : ''}  src={item.iconPath}></CoverImage>
-                    <CoverView style={{color:(selected === index ? selectedColor : color)}}>{item.text}</CoverView>
+                    <CoverImage  className={pageIdex === index ? 'text-select' : ''}  src={item.iconPath}></CoverImage>
+                    <CoverView style={{color:(pageIdex === index ? selectedColor : color)}}>{item.text}</CoverView>
                 </CoverView>
             ))}
         </CoverView>
