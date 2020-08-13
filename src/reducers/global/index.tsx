@@ -2,7 +2,7 @@ import { GLOBAL } from '../../constants/global'
 import { combineReducers } from 'redux'
 
 const INITIAL_STATE = {
-    index: 0
+    pageIndex: 0
 }
 
 export function global (state = INITIAL_STATE, action) {
@@ -10,7 +10,7 @@ export function global (state = INITIAL_STATE, action) {
     case GLOBAL.PAGEINDEX:
       return {
         ...state,
-        index:action.index
+        pageIndex:action.index
       }
     default:
       return state
