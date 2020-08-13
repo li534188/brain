@@ -2,7 +2,7 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import Index from './pages/index'
 import { Provider } from '@tarojs/redux'
 import sr from 'sr-sdk-wxapp'
-
+import 'taro-ui/dist/style/index.scss'
 import configStore from './store'
 import './app.scss'
 /**

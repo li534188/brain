@@ -3,11 +3,11 @@ import Taro,{Component}   from  '@tarojs/taro'
 import { View, Text,  Canvas, Image  } from '@tarojs/components'
 // import { Canvas } from 'taro-ui'
 // import './index.scss'
+import { AtTag } from 'taro-ui'
 import BrainMain from '../../asset/brain-main.png'
-import planets from  '../../asset/planets.gif'
+import './index.scss'
 
 export default class Brain extends Component {
-  myRef: React.RefObject<any>
   constructor(props){
       super(props)
   }
@@ -19,12 +19,9 @@ export default class Brain extends Component {
   componentDidMount () { 
       // 操作画布
       const ctx  = Taro.createCanvasContext('poster',)
-    //   const ctx = canvas.getContext("2d");
-    ctx.fillStyle="#FF0000";
-    ctx.fillRect(0,0,150,75);
+      ctx.drawImage(BrainMain, 0, 0, 300, 200)
       ctx.draw()
-    //   canvas.drawImage(BrainMain, 0, 0, 200, 200)
-    // const query = Taro.createSelectorQuery().in(this.$scope);
+
   }
 
 
@@ -36,10 +33,9 @@ export default class Brain extends Component {
 
   render () {
     return (
-      <View className='index'>
-        <Text>大脑实验室</Text>
-        <Canvas style='width: 300px; height: 200px;' canvasId='poster' />
-        <Image src={BrainMain} style={{width:"145px", height:"126px"}}  />
+      <View className='brain-wrapper'>
+        <Text className="brain-header">大脑实验室</Text>
+        <Canvas className="brain-canvas" style='width: 300px; height: 200px;' canvasId='poster' />
       </View>
     )
   }
