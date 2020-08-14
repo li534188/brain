@@ -1,0 +1,87 @@
+export const pointArr = [{
+    pointX:167*0.61,
+    pointY:89*0.619,
+    pointSize:'small',
+},{
+    pointX:77*0.61,
+    pointY:160*0.619,
+    pointSize:'small',
+},{
+    pointX:45*0.61,
+    pointY:245*0.619,
+    pointSize:'middle',
+},{
+    pointX:81*0.61,
+    pointY:300*0.619,
+    pointSize:'middle',
+},{
+    pointX:94*0.61,
+    pointY:351*0.619,
+    pointSize:'small',
+},{
+    pointX:163*0.61,
+    pointY:368*0.619,
+    pointSize:'middle',
+},{
+    pointX:155*0.61,
+    pointY:419*0.619,
+    pointSize:'small',
+},{
+    pointX:185*0.61,
+    pointY:446*0.619,
+    pointSize:'small',
+},{
+    pointX:227*0.61,
+    pointY:334*0.619,
+    pointSize:'xl',
+},{
+    pointX:305*0.61,
+    pointY:353*0.619,
+    pointSize:'middle',
+},{
+    pointX:353*0.61,
+    pointY:317*0.619,
+    pointSize:'small',
+},{
+    pointX:430*0.61,
+    pointY:306*0.619,
+    pointSize:'xl',
+},{
+    pointX:442*0.61,
+    pointY:197*0.619,
+    pointSize:'small',
+},{
+    pointX:408*0.61,
+    pointY:141*0.619,
+    pointSize:'middle',
+},{
+    pointX:325*0.61,
+    pointY:83*0.619,
+    pointSize:'small',
+},{
+    pointX:160*0.61,
+    pointY:304*0.619,
+    pointSize:'small',
+},{
+    pointX:180*0.61,
+    pointY:212*0.619,
+    pointSize:'big',
+},{
+    pointX:230*0.61,
+    pointY:143*0.61,
+    pointSize:'xxl',
+},{
+    pointX:348*0.61,
+    pointY:183*0.619,
+    pointSize:'xxl',
+},{
+    pointX:295*0.61,
+    pointY:265*0.619,
+    pointSize:'xxl',
+}];
+
+export  const lineArr = [[0,1],[0,14],[0,16],[0,17],[1,2],[1,16],[1,17],[1,15],[2,16],[2,3],[2,15],[3,15],
+[3,4],[4,15],[4,5],[4,8],[5,8],[5,6],[6,7],[7,8],[8,15],[8,16],[8,19],[8,9],[8,10],
+[9,10],[10,11],[10,12],[10,18],[10,19],[11,12],[12,13],[12,18],[13,18],[13,14],[12,19],[14,18],[14,17],[14,19],[15,16],[15,19],
+[16,17],[16,18],[16,19],[17,18],[17,19],
+]
